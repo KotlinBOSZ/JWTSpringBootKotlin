@@ -1,5 +1,7 @@
 package me.szydelko.jwtspringbootkotlin.mapper
 
+import lombok.AllArgsConstructor
+import lombok.NoArgsConstructor
 import me.szydelko.jwtspringbootkotlin.dto.RegisterDTO
 import me.szydelko.jwtspringbootkotlin.dto.UserDTO
 import me.szydelko.jwtspringbootkotlin.model.User

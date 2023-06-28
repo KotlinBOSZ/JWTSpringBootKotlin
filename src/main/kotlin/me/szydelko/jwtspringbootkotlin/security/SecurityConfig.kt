@@ -14,7 +14,7 @@ import org.springframework.security.web.SecurityFilterChain
 
 @Configuration
 @EnableWebSecurity
-class SecurityConfig(private val customUserDetailsService: CustomUserDetailsService) {
+class SecurityConfig() {
     @Bean
     fun filterChain(http: HttpSecurity): SecurityFilterChain{
 

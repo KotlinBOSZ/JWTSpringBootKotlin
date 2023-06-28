@@ -14,7 +14,7 @@ class UserService(private val userRepository: UserRepository){
         return Optional.of(userRepository.save(user));
     }
     fun update(user: User): Optional<User> {
-        if (user.id == null ||!userRepository.existsById(user.id)) return Optional.empty();
+        if (user.id == null || !userRepository.existsById(user.id!!)) return Optional.empty();
         return Optional.of(userRepository.save(user));
 
     }
@@ -35,6 +35,9 @@ class UserService(private val userRepository: UserRepository){
         return userRepository.findById(id)
     }
 
+    fun findByEmail(email: String): Optional<User>{
+        return userRepository.findByEmail(email)
+    }
     fun findByIdOrEmail(id: Long?, email: String): Optional<User>{
         if (id == null) return userRepository.findByEmail(email)
         return userRepository.findByIdOrEmail(id,email)
