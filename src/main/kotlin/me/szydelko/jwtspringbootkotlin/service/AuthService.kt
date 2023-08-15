@@ -25,11 +25,12 @@ class AuthService(
 
     }
 
-    fun register(loginDTO: LoginDTO): String {
-
-        val authentication = authenticationManager.authenticate(UsernamePasswordAuthenticationToken(loginDTO.username,loginDTO.password))
-        SecurityContextHolder.getContext().authentication = authentication
-        return "success"
-    }
+//    @Deprecated("no")
+//    fun login(loginDTO: LoginDTO): String {
+//
+//        val authentication = authenticationManager.authenticate(UsernamePasswordAuthenticationToken(loginDTO.username,loginDTO.password))
+//        SecurityContextHolder.getContext().authentication = authentication
+//        return "success"
+//    }
 
 }
